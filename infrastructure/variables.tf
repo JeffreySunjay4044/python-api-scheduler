@@ -13,6 +13,16 @@ variable "env" {
   type        = string
 }
 
+variable "authentication_token"{
+  description = "authentication token"
+  type        = string
+}
+
+variable "requestUrl" {
+  description = "request url"
+  type        = string
+}
+
 variable "sqs_event_source_arn" {
   description = "sqs event_source_arn value"
   type        = string
@@ -55,4 +65,16 @@ variable "kinesis_process_parquet_bucket_name" {
 variable "description" {
   description = "Description for BEDAP secret"
   default     = "BEDAP Encrypted Cloudwatch Log Group for Kinesis Lambda"
+}
+
+variable "expected_status_code" {
+  default = ""
+}
+
+variable "region" {
+  default = ""
+}
+
+variable "name" {
+  default = ""
 }
