@@ -39,6 +39,16 @@ resource "aws_lambda_function" "consume_from_eb" {
 }
 
 
+module "synthetic"{
+  source = "./synthetic.tf"
+  request_url = "https://datadoghq.com"
+  authentication_token = "token"
+  expected_status_code = "200"
+  region = "us-east-1"
+  name = "synthetic dd api test"
+}
+
+
 
 
 

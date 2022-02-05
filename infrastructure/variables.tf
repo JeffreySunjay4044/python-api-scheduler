@@ -18,7 +18,7 @@ variable "authentication_token"{
   type        = string
 }
 
-variable "requestUrl" {
+variable "request_url" {
   description = "request url"
   type        = string
 }

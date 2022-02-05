@@ -1,12 +1,13 @@
 
-resource "datadog_synthetics_test" "test_api" {
+resource "datadog_synthetics_test" "datadog-synthetic" {
   type    = "api"
   subtype = "http"
   request_definition {
     method = "GET"
-    url    = var.requestUrl
+    url    = var.request_url
+    port   = 443
   }
-  request_headers = {
+  request_headers {
     Content-Type   = "application/json"
     Authentication = var.authentication_token
   }
